@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: python-sample-vs
+  namespace: default
+spec:
+  gateways:
+  - istio-gateway
+  hosts:
+  - '*'
+  http:
+  - match:
+    - headers:
+        host:
+          exact: pyms2-wasm.dev.a10networks.com
+    route:
+    - destination:
+        host: pyms2-wasm.ytsai.svc.cluster.local
+        port:
+          number: 30034

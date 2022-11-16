@@ -42,7 +42,7 @@ For a more in-depth explanation please refer to  the [official documentation](ht
 
 ## Run your python script
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 

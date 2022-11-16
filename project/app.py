@@ -8,9 +8,11 @@ from project.models.init_db import db
 class MyMicroservice(Microservice):
     def init_libs(self) -> None:
 
+        """
         db.init_app(self.application)
         with self.application.test_request_context():
             db.create_all()
+        """
 
     def init_logger(self) -> None:
         if not self.application.config["DEBUG"]:
