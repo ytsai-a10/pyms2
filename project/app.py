@@ -36,12 +36,12 @@ class MyMicroservice(Microservice):
                     },
                     'anyconfig': {
                         'handlers': ['console'],
-                        'level': "WARNING",
+                        'level': level,
                         'propagate': True,
                     },
                     'pyms': {
                         'handlers': ['console'],
-                        'level': "WARNING",
+                        'level': level,
                         'propagate': True,
                     },
                     'root': {
